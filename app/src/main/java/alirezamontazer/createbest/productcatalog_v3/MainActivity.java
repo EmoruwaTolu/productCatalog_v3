@@ -112,7 +112,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void addProduct() {
 
-        Toast.makeText(this, "NOT IMPLEMENTED YET", Toast.LENGTH_LONG).show();
+        String prices = editTextPrice.getText().toString();
+
+        Product newAdd = new Product(editTextName.getText().toString(), Double.parseDouble(prices));
+
+        products.add(newAdd);
+
+        Toast.makeText(this, prices, Toast.LENGTH_LONG).show();
     }
 
 
